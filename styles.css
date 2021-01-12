@@ -64,16 +64,18 @@ a:hover {
     max-width: 600px;
     font-size: min(20vw, 80px);
     font-weight: normal;
+    white-space: nowrap;
     margin: 0 auto;
     text-shadow: 0 0 5px #238fff, 0 0 10px #b745b9bd, 0 1px black, 0 2px 5px black, 0 5px 15px black;
 }
 
 .section {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 15vw);
     max-width: 600px;
     margin: 0 auto;
     padding: 10vw 10vw 5vw;
+    box-sizing: content-box;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -84,11 +86,16 @@ a:hover {
     }
 }
 
+.logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .gde {
     width: 250px;
     border-radius: 50px;
-    display: block;
-    margin-bottom: 20px;
+    margin-left: 12px;
 }
 
 .links {
