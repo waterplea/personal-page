@@ -21,11 +21,16 @@ html,
 body {
     margin: 0;
     font-family: 'Manrope', -apple-system, 'BlinkMacSystemFont', system-ui, 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
-    scroll-snap-stop: normal;
-    scroll-snap-type: y mandatory;
     background: var(--background);
     color: var(--text);
 }
+
+/*@supports not (-webkit-hyphens: none) {*/
+    html {
+        scroll-snap-stop: normal;
+        scroll-snap-type: y mandatory;
+    }
+/*}*/
 
 h1, h2 {
     font-family: 'xtreem2', cursive;
