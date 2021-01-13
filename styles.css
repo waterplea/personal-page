@@ -67,7 +67,7 @@ a:hover {
 
 @supports (-webkit-hyphens: none) {
     .header {
-        background: red url("assets/photo.jpg") center;
+        background: red;
         background-size: cover;
     }
 }
