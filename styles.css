@@ -49,19 +49,17 @@ a:hover {
 
 .header {
     height: 100vh;
-    width: 100%;
-    min-width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 10vw 10vw 5vw;
-    font-size: min(5vw, 25px);
-    text-align: center;
-    background: url("assets/photo.webp") center;
-    background-size: cover;
-    text-shadow: 0 1px black, 0 2px 5px black, 0 5px 15px black;
-    box-shadow: inset 0 -400px 200px -200px var(--background);
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: flex-end;*/
+    /*padding: 10vw 10vw 5vw;*/
+    /*font-size: min(5vw, 25px);*/
+    /*text-align: center;*/
+    /*background: url("assets/photo.webp") center;*/
+    /*background-size: cover;*/
+    /*text-shadow: 0 1px black, 0 2px 5px black, 0 5px 15px black;*/
+    /*box-shadow: inset 0 -400px 200px -200px var(--background);*/
     scroll-snap-align: start;
 }
 
