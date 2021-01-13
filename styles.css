@@ -2,7 +2,6 @@
     --background: #010b21;
     --text: white;
     --accent: #ff4081;
-    --accent-hover: #ff679b;
 }
 
 @font-face{
@@ -41,15 +40,14 @@ h1, h2 {
 a {
     color: var(--accent);
     text-decoration: none;
-    transition: color .3s;
+    transition: opacity .3s;
 }
 
 a:hover {
-    color: var(--accent-hover);
+    opacity: .8;
 }
 
 .header {
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -197,6 +195,7 @@ a:hover {
 
 .footer {
     padding: 20px;
+    font-size: .8em;
     text-align: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
