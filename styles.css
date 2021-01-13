@@ -67,6 +67,7 @@ a:hover {
     .header {
         background: url("assets/photo.jpg") center;
         background-size: cover;
+        box-shadow: none;
     }
 }
 
