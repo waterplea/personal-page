@@ -25,12 +25,12 @@ body {
     color: var(--text);
 }
 
-/*@supports not (-webkit-hyphens: none) {*/
+@supports not (-webkit-hyphens: none) {
     html {
         scroll-snap-stop: normal;
         scroll-snap-type: y mandatory;
     }
-/*}*/
+}
 
 h1, h2 {
     font-family: 'xtreem2', cursive;
