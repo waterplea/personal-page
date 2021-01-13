@@ -65,6 +65,13 @@ a:hover {
     scroll-snap-stop: normal;
 }
 
+@supports (-webkit-hyphens: none) {
+    .header {
+        background: url("assets/photo.jpg") center;
+        background-size: cover;
+    }
+}
+
 @media all and (max-width: 599px) {
     .header {
         padding-bottom: 20vw;
