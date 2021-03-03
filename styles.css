@@ -26,9 +26,11 @@ body {
 }
 
 @supports not (-webkit-hyphens: none) {
-    html {
-        scroll-snap-stop: normal;
-        scroll-snap-type: y mandatory;
+    @media all and (min-width: 800px) {
+        html {
+            scroll-snap-stop: normal;
+            scroll-snap-type: y mandatory;
+        }
     }
 }
 
@@ -45,6 +47,10 @@ a {
 
 a:hover {
     opacity: .8;
+}
+
+.safari {
+    display: none;
 }
 
 .header {
@@ -69,6 +75,50 @@ a:hover {
         background-size: cover;
         box-shadow: none;
     }
+
+    .safari {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--background);
+        display: flex;
+        flex-direction: column;
+        z-index: 666;
+    }
+}
+
+.checkbox {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox:checked + .safari {
+    display: none;
+}
+
+.warning {
+    flex: 1;
+    font-size: 36px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.confirm {
+    flex: 1;
+    font-size: 20px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 @media all and (max-width: 599px) {
@@ -88,10 +138,10 @@ a:hover {
 
 .section {
     position: relative;
-    min-height: calc(100vh - 15vw);
+    min-height: calc(100vh - 12vw);
     max-width: 600px;
     margin: 0 auto;
-    padding: 10vw 10vw 5vw;
+    padding: 7vw 10vw 5vw;
     box-sizing: content-box;
     scroll-snap-align: start;
 }
