@@ -5,83 +5,15 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <title>iOS is a Joke</title>
     <style>
-      label,
-      button {
-        background: gainsboro;
-        padding: 0.5rem 1rem;
-        border: none;
-        font: 1rem/1.125rem sans-serif;
-      }
-      
-      input,
-      article {
-        display: none;
+      section {
         position: fixed;
         inset: 0;
-        place-items: center;
-        justify-content: center;
-        background: rgb(0 0 0 / 75%);
-      }
-      
-      article:has(:checked) {
-        display: flex;
-      }
-      
-      section {
-        padding: 1rem;
-        background: white;
-      }
-      
-      .backdrop {
-        background: none;
-        backdrop-filter: brightness(0.25);
-      }
-      
-      .sheet {
-        flex-direction: column;
-        place-content: end;
-        place-items: stretch;
+        backdrop-filter: blur(10px);
       }
     </style>
   </head>
   <body>
-    <dialog id="dialog">
-      <form method="dialog">
-        I am a native dialog
-        <button>Close</button>
-      </form>
-    </dialog>
-    <article>
-      <section>
-        I'm a custom overlay
-        <label>
-          <input id="custom" type="checkbox" />
-          Close
-        </label>
-      </section>
-    </article>
-    <article class="backdrop">
-      <section>
-        I'm a custom overlay with backdrop
-        <label>
-          <input id="backdrop" type="checkbox" />
-          Close
-        </label>
-      </section>
-    </article>
-    <article class="sheet">
-      <section>
-        I'm a custom overlay with bottom sheet
-        <label>
-          <input id="sheet" type="checkbox" />
-          Close
-        </label>
-      </section>
-    </article>
-    <button id="native" onclick="dialog.showModal()">Native</button>
-    <label for="custom">Custom</label>
-    <label for="backdrop">Backdrop</label>
-    <label for="sheet">Sheet</label>
+    <section>I am a full page overlay</section>
     <script>document.body.innerHTML += `<p>I am here just for scroll</p>`.repeat(40)</script>
   </body>
 </html>
