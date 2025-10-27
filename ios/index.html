@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <title>iOS is a Joke</title>
     <style>
-      section {
-        position: fixed;
-        inset: 0;
-        backdrop-filter: blur(10px);
-      }
+        #backdrop::backdrop {
+            backdrop-filter: blur(10px);
+        }
+
+        #gradient::backdrop {
+            background: linear-gradient(to right, black, transparent);
+        }
     </style>
-  </head>
-  <body>
-    <section>I am a full page overlay</section>
-    <script>document.body.innerHTML += `<p>I am here just for scroll</p>`.repeat(40)</script>
-  </body>
+</head>
+<body>
+  <dialog id="fixed">
+      <form method="dialog">
+          I am a native dialog
+          <button>Close</button>
+      </form>
+  </dialog>
+  <dialog id="backdrop">
+      <form method="dialog">
+          I am a native dialog with backdrop filter
+          <button>Close</button>
+      </form>
+  </dialog>
+  <dialog id="gradient">
+      <form method="dialog">
+          I am a native dialog with gradient
+          <button>Close</button>
+      </form>
+  </dialog>
+  <button onclick="fixed.showModal()">Fixed</button>
+  <button onclick="backdrop.showModal()">Broken backdrop</button>
+  <button onclick="gradient.showModal()">Broken gradient</button>
+  <script>document.body.innerHTML += `<p>I am here just for scroll</p>`.repeat(40)</script>
+</body>
 </html>
