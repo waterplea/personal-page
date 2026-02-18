@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta name="text-scale" content="scale">
+    <style>
+      :root {
+         font-size: calc(env(preferred-text-scale) * 16px);
+      }
+    </style>
+  </head>
+  <body>
+    Directly on the page
+    <script>
+      const iframe = document.createElement('iframe');
+
+      iframe.srcdoc = `
+        <html>
+          <head>
+            <meta name="text-scale" content="scale">
+            <style>
+              :root {
+                 font-size: calc(env(preferred-text-scale) * 16px);
+              }
+            </style>
+          </head>
+          <body>
+            Inside iframe
+          </body>
+        </html>
+      `;
+
+      document.body.append(iframe);
+    </script>
+  </body>
+</html>
