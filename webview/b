@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta content="width=device-width, viewport-fit=cover" name="viewport">
+    <style>
+      :root {
+         font-size: calc(env(preferred-text-scale) * 16px);
+      }
+
+      div {
+        width: 1rem;
+        height: 1rem;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    This square is 1rem in size:
+    <div></div>
+  </body>
+</html>
