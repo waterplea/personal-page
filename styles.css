@@ -38,7 +38,6 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 16px;
-    margin: 8px 0;
     color: var(--accent);
     text-decoration: none;
     transition: opacity .3s;
@@ -137,7 +136,7 @@ footer {
 
 iframe {
     width: 256px;
-    height: 398px;
+    height: 390px;
     border: 0;
-    margin: 20px;
+    margin: 10px 20px 0;
 }
