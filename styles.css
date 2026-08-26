@@ -62,6 +62,7 @@ a b + * {
 a img {
     max-width: 20vw;
     height: auto;
+    flex-shrink: 0;
 }
 
 header {
